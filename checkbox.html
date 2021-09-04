@@ -1,10 +1,12 @@
 <script>
-function uncheckAll(){
-   $('input[type="checkbox"]:checked').prop('checked',false);
+function uncheckAll() {
+  document.querySelectorAll('input[type="checkbox"]')
+    .forEach(el => el.checked = false);
 }
 
 function checkAll(){
-   $('input[type="checkbox"]:checked').prop('checked',true);
+     document.querySelectorAll('input[type="checkbox"]')
+    .forEach(el => el.checked = true);
 }
 </script>
 
