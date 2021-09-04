@@ -1,3 +1,16 @@
+function uncheckAll(){
+   $('input[type="checkbox"]:checked').prop('checked',false);
+}
+
+function checkAll(){
+   $('input[type="checkbox"]:checked').prop('checked',true);
+}
+
+<button onclick="uncheckAll()">Uncheck All Characters</button>
+<br><br>
+<button onclick="checkAll()">Check All Characters</button>
+<br><br>
+
 <ul>
 <li><label><input type="checkbox" name="fighters[]" value="WarriorofLight" checked>Warrior of Light</label></li>
 <li><label><input type="checkbox" name="fighters[]" value="Vivi" checked>Vivi</label></li>
