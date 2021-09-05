@@ -9,7 +9,7 @@ var fightersArr = ["WarriorofLight", "Vivi", "Rem", "Sazh", "Tifa", "Cloud", "Ho
 var callsArr = ["WarriorofLight", "Vivi", "Rem", "Sazh", "Tifa", "Cloud", "Hope", "Yshtola", "Cecil", "Yda", "Vaan", "Yuffie", "Yuna", "Edge", "Bartz", "Penelo", "Terra", "Yang", "OnionKnight", "Firion", "Laguna", "Shadow", "Squall", "Vanille", "Setzer", "Wakka", "Galuf", "Shantotto", "Balthier", "Eiko", "Tidus", "Layle", "Vincent", "Faris", "Ramza", "Sabin", "Krile", "Lightning", "Thancred", "Snow", "Cater", "Ashe", "Aerith", "Irvine", "Serah", "Edgar", "Celes", "Kuja", "Palom", "Maria", "Raijin", "Fujin", "Seifer", "Sephiroth", "CidHighwind", "Rydia", "Kefka", "Zack", "Yuri", "Noctis", "Alisaie", "Selphie", "Gilgamesh", "CaitSith", "Beatrix", "Leon", "Seven", "Deuce", "Agrias", "Locke", "CecilPaladin", "Rosa", "Golbez", "Lulu", "Freya", "Vayne", "Porom", "Paine", "Noel", "Sherlotta", "Garland", "Ultimecia", "Machina", "Lyse", "Basch", "TheEmperor", "Ignis", "Aranea", "Gau", "Kamlanaut", "Ciaran", "ExDeath", "Caius", "Jack", "Arciela", "Keiss", "CloudofDarkness", "Ealdnarche", "Trey", "Amidatelion", "Desch", "Gabranth", "Nine", "Ardyn", "Strago", "Kurasame", "Gladio", "Reno", "Rude", "Xande", "Guy", "Ceodore", "Mog", "Kadaj", "Iroha", "Cor", "Queen"];
 var summons = ["Ifrit", "Shiva", "Ramuh", "Leviathan", "Brothers", "Pandemonium", "Diabolos", "Alexander", "Odin", "Bahamut", "Chocobo", "Sylph"];
 
-  document.write('<h3>Choose from these 6 Characters:</h3><br><br>');
+  document.write('<h3>Choose from these 6 Characters:</h3>');
   document.write('<div class="grid">')
 for (let i = 0; i < 6; i++)
 {
@@ -19,7 +19,7 @@ for (let i = 0; i < 6; i++)
   fightersArr.splice(j, 1);
 }
 document.write('</div>')
-  document.write('<h3>Choose from these 6 Call Abilities:</h3><br><br>');
+  document.write('<h3>Choose from these 6 Call Abilities:</h3>');
   document.write('<div class="grid">')
 for (let i = 0; i < 6; i++)
 {
@@ -29,11 +29,12 @@ for (let i = 0; i < 6; i++)
   callsArr.splice(j, 1);
 }
 document.write('</div>')
-    document.write('<h3>Choose from these 2 Summons:</h3><br><br>');
+    document.write('<h3>Choose from these 2 Summons:</h3>');
+    document.write('<div class="grid2">')
   for (let i = 0; i < 2; i++)
 {
   var j = Math.floor(Math.random() * (summons.length));
-  var imageUrl = '<img src=SummonImages/' + summons[j] + '_Face.png </img>' + '<br><br>'
+  var imageUrl = '<div class="grid-item2"><img src=SummonImages/' + summons[j] + '_Face.png </img>' + '</div>'
   document.write(imageUrl);
   summons.splice(j, 1);
 }
