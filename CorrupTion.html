@@ -22,10 +22,10 @@ for (let i = 0; i < 6; i++)
     document.write('<h3>Choose from these 2 Summons:</h3><br><br>');
   for (let i = 0; i < 2; i++)
 {
-  var j = Math.floor(Math.random() * (fightersArr.length));
-  var imageUrl = '<img src=https://dissidiacompendium.com/images/static/icons/summons/face/' + callsArr[j] + '_Face.png</img>' + '<br><br>'
+  var j = Math.floor(Math.random() * (summons.length));
+  var imageUrl = '<img src=https://dissidiacompendium.com/images/static/icons/summons/face/' + summons[j] + '_Face.png</img>' + '<br><br>'
   document.write(imageUrl);
-  fightersArr.splice(j, 1); 
+  summons.splice(j, 1); 
 }
   
 </script>
