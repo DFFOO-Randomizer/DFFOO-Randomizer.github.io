@@ -1,24 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
 <script>
 var fightersArr = ["WarriorofLight", "Vivi", "Rem", "Sazh", "Tifa", "Cloud", "Hope", "Yshtola", "Zidane", "Cecil", "Yda", "Vaan", "Yuffie", "Yuna", "Edge", "King", "Bartz", "Penelo", "Terra", "Yang", "OnionKnight", "Firion", "Laguna", "Steiner", "Shadow", "Squall", "Vanille", "Setzer", "Wakka", "Galuf", "Shantotto", "Balthier", "Eiko", "Tidus", "Layle", "Zell", "Vincent", "Prishe", "Faris", "Ramza", "Ace", "Seymour", "Sabin", "Krile", "Cyan", "Papalymo", "Lightning", "Thancred", "Snow", "Cater", "Ashe", "Aerith", "Lion", "Auron", "Irvine", "Serah", "Edgar", "Garnet", "Celes", "Kain", "Kuja", "Palom", "Maria", "Quistis", "Raijin", "Fujin", "Seifer", "Sephiroth", "Lenna", "CidHighwind", "Rydia", "Kefka", "Zack", "Lilisette", "Yuri", "Jecht", "Noctis", "Alisaie", "Selphie", "Gilgamesh", "Relm", "CaitSith", "Beatrix", "Leon", "Fang", "Seven", "Deuce", "Agrias", "Locke", "Barret", "CecilPaladin", "Rosa", "Golbez", "Rinoa", "Lulu", "LannReynn", "Freya", "Vayne", "Fran", "Porom", "Paine", "Cinque", "Prompto", "Alphinaud", "Noel", "Aphmau", "Sherlotta", "Garland", "Ultimecia", "Machina", "Lyse", "Basch", "Kimahri", "TheEmperor", "Eight", "Ignis", "Aranea", "Gau", "Kamlanaut", "Ciaran", "Leo", "ExDeath", "Caius", "Jack", "Arciela", "Keiss", "CloudofDarkness", "Ealdnarche", "Trey", "Amidatelion", "Desch", "Gabranth", "Nine", "Ardyn", "Edward", "Strago", "Kurasame", "Gladio", "Reno", "Rude", "Xande", "Guy", "Ceodore", "Mog", "Kadaj", "Iroha", "Cor", "Queen"];
 var callsArr = ["WarriorofLight", "Vivi", "Rem", "Sazh", "Tifa", "Cloud", "Hope", "Yshtola", "Cecil", "Yda", "Vaan", "Yuffie", "Yuna", "Edge", "Bartz", "Penelo", "Terra", "Yang", "OnionKnight", "Firion", "Laguna", "Shadow", "Squall", "Vanille", "Setzer", "Wakka", "Galuf", "Shantotto", "Balthier", "Eiko", "Tidus", "Layle", "Vincent", "Faris", "Ramza", "Sabin", "Krile", "Lightning", "Thancred", "Snow", "Cater", "Ashe", "Aerith", "Irvine", "Serah", "Edgar", "Celes", "Kuja", "Palom", "Maria", "Raijin", "Fujin", "Seifer", "Sephiroth", "CidHighwind", "Rydia", "Kefka", "Zack", "Yuri", "Noctis", "Alisaie", "Selphie", "Gilgamesh", "CaitSith", "Beatrix", "Leon", "Seven", "Deuce", "Agrias", "Locke", "CecilPaladin", "Rosa", "Golbez", "Lulu", "Freya", "Vayne", "Porom", "Paine", "Noel", "Sherlotta", "Garland", "Ultimecia", "Machina", "Lyse", "Basch", "TheEmperor", "Ignis", "Aranea", "Gau", "Kamlanaut", "Ciaran", "ExDeath", "Caius", "Jack", "Arciela", "Keiss", "CloudofDarkness", "Ealdnarche", "Trey", "Amidatelion", "Desch", "Gabranth", "Nine", "Ardyn", "Strago", "Kurasame", "Gladio", "Reno", "Rude", "Xande", "Guy", "Ceodore", "Mog", "Kadaj", "Iroha", "Cor", "Queen"];
 var summons = ["Ifrit", "Shiva", "Ramuh", "Leviathan", "Brothers", "Pandemonium", "Diabolos", "Alexander", "Odin", "Bahamut", "Chocobo", "Sylph"];
 
   document.write('<h3>Choose from these 6 Characters:</h3><br><br>');
+  document.write('<div class="grid">')
 for (let i = 0; i < 6; i++)
 {
   var j = Math.floor(Math.random() * (fightersArr.length));
-  var imageUrl = '<img src=https://dissidiacompendium.com/images/static/characters/' + fightersArr[j] + '/cc.png </img>' + '<br><br>'
+  var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + fightersArr[j] + '/cc.png </img>' + '</div>'
   document.write(imageUrl);
   fightersArr.splice(j, 1);
 }
+document.write('</div>')
   document.write('<h3>Choose from these 6 Call Abilities:</h3><br><br>');
+  document.write('<div class="grid">')
 for (let i = 0; i < 6; i++)
 {
   var j = Math.floor(Math.random() * (callsArr.length));
-  var imageUrl = '<img src=https://dissidiacompendium.com/images/static/characters/' + callsArr[j] + '/cc.png </img>' + '<br><br>'
+  var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + callsArr[j] + '/cc.png </img>' + '</div>'
   document.write(imageUrl);
   callsArr.splice(j, 1);
 }
+document.write('</div>')
     document.write('<h3>Choose from these 2 Summons:</h3><br><br>');
   for (let i = 0; i < 2; i++)
 {
