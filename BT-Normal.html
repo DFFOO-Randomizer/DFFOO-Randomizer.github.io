@@ -1,0 +1,10 @@
+<script>
+var fightersArr = ["OnionKnight", "Firion", "Ealdnarche"];
+for (let i = 0; i < 3; i++)
+{
+  var j = Math.floor(Math.random() * (fightersArr.length));
+  var imageUrl = '<img src=https://dissidiacompendium.com/images/static/characters/' + fightersArr[j] + '/cc.png </img>' + '<br><br>'
+  document.write(imageUrl);
+  fightersArr.splice(j, 1); 
+}
+</script>
