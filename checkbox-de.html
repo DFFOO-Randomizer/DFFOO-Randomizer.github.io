@@ -176,7 +176,7 @@ function checkAll(){
 function myFunction() {
 var array = []
 var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
-
+document.write('<!DOCTYPE html><head><link rel="stylesheet" href="styles.css"></head>');
 for (var i = 0; i < checkboxes.length; i++) {
   array.push(checkboxes[i].value)
 }
@@ -185,7 +185,7 @@ if (array.length < 60){
 } else {
   for (let k = 0; k < 20; k++) {
     document.write('<h3>Team for DE'+(k+1)+'</h3>');
-    document.write('<div class="grid">');
+    document.write('<div class="grid3">');
     for (let i = 0; i < 3; i++)
     {
       var j = Math.floor(Math.random() * (array.length));

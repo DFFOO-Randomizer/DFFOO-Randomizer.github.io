@@ -22,6 +22,13 @@ img {
  /* 50 pixels of space added between rows and 30 pixels added between columns  */
 }
 
+.grid3
+ {
+  display: grid;
+  grid-template-columns: repeat(3,150px);  /* 3 columns */
+  grid-template-rows: repeat(1,150px); /* 3 rows  */
+ /* 50 pixels of space added between rows and 30 pixels added between columns  */
+}
 .grid-item2{
   border:thin gray solid;
   padding:10px;
