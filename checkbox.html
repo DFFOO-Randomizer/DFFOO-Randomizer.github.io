@@ -11,11 +11,12 @@ function checkAll(){
 </script>
 
 <button onclick="uncheckAll()">Uncheck All Characters</button>
-<br><br>
 <button onclick="checkAll()">Check All Characters</button>
 <br><br>
 
-<ul>
+<fieldset class="group">
+<legend>Select Your Fighters</legend>
+<ul class="checkbox">
 <li><label><input type="checkbox" name="fighters[]" value="WarriorofLight" checked>Warrior of Light</label></li>
 <li><label><input type="checkbox" name="fighters[]" value="Vivi" checked>Vivi</label></li>
 <li><label><input type="checkbox" name="fighters[]" value="Rem" checked>Rem</label></li>
@@ -165,6 +166,7 @@ function checkAll(){
 <li><label><input type="checkbox" name="fighters[]" value="Cor" checked>Cor</label></li>
 <li><label><input type="checkbox" name="fighters[]" value="Queen" checked>Queen</label></li>
 </ul>
+</fieldset>
 
 <script>
 function myFunction() {
@@ -177,13 +179,15 @@ for (var i = 0; i < checkboxes.length; i++) {
 
 for (let i = 0; i < 3; i++)
 {
+  document.write('<div class="grid3">');
   var j = Math.floor(Math.random() * (array.length));
-  var imageUrl = '<img src=https://dissidiacompendium.com/images/static/characters/' + array[j] + '/cc.png </img>' + '<br><br>'
+  var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + array[j] + '/cc.png </img></div>'
   document.write(imageUrl);
-  array.splice(j, 1); 
+  array.splice(j, 1);
 }
-  document.write('<button onClick="window.location.reload();">New Random Team</button>')
+document.write('</div>');
+  document.write('<button onClick="window.location.reload();">Back to Checkboxes</button>')
 }
 </script>
 
-<button onclick="myFunction()">Get Random Team</button>
+<button onclick="myFunction()">Get Random Team From Selection</button>
