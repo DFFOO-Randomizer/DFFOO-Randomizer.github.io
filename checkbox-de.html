@@ -17,11 +17,12 @@ function checkAll(){
 </script>
 
 <button onclick="uncheckAll()">Uncheck All Characters</button>
-<br><br>
 <button onclick="checkAll()">Check All Characters</button>
 <br><br>
 
-<ul>
+<fieldset class="group">
+<legend>Select Your Fighters</legend>
+<ul class="checkbox">
 <li><label><input type="checkbox" name="fighters[]" value="WarriorofLight" checked>Warrior of Light</label></li>
 <li><label><input type="checkbox" name="fighters[]" value="Vivi" checked>Vivi</label></li>
 <li><label><input type="checkbox" name="fighters[]" value="Rem" checked>Rem</label></li>
@@ -171,6 +172,7 @@ function checkAll(){
 <li><label><input type="checkbox" name="fighters[]" value="Cor" checked>Cor</label></li>
 <li><label><input type="checkbox" name="fighters[]" value="Queen" checked>Queen</label></li>
 </ul>
+</fieldset>
 
 <script>
 function myFunction() {
