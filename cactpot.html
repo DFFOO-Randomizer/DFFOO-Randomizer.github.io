@@ -184,6 +184,10 @@ document.write('<!DOCTYPE html><head><link rel="stylesheet" href="styles.css"></
 for (var i = 0; i < checkboxes.length; i++) {
   array.push(checkboxes[i].value)
 }
+if (array.length < 9){
+  document.write('<p>Not enough characters selected, please check minimum 9 options</p>');
+document.write('<button onClick="window.location.reload();">New Cactpot Team</button>');
+} else {
 document.write('<h3>Choose 1 line of 3 fighters for your Characters,</h3>');
 document.write('<h3>Then Choose 1 line for your Call Abilities:</h3>');
 
@@ -209,6 +213,7 @@ summons.splice(j, 1);
 document.write('</div>');
 
 document.write('<button onClick="window.location.reload();">New Cactpot Team</button>');
+}
 }
 </script>
 
