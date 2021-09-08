@@ -1,12 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
 
 <script>
 var fightersArr = ["WarriorofLight", "Vivi", "Rem", "Sazh", "Tifa", "Cloud", "Hope", "Yshtola", "Zidane", "Cecil", "Yda", "Vaan", "Yuffie", "Yuna", "Edge", "King", "Bartz", "Penelo", "Terra", "Yang", "OnionKnight", "Firion", "Laguna", "Steiner", "Shadow", "Squall", "Vanille", "Setzer", "Wakka", "Galuf", "Shantotto", "Balthier", "Eiko", "Tidus", "Layle", "Zell", "Vincent", "Prishe", "Faris", "Ramza", "Ace", "Seymour", "Sabin", "Krile", "Cyan", "Papalymo", "Lightning", "Thancred", "Snow", "Cater", "Ashe", "Aerith", "Lion", "Auron", "Irvine", "Serah", "Edgar", "Garnet", "Celes", "Kain", "Kuja", "Palom", "Maria", "Quistis", "Raijin", "Fujin", "Seifer", "Sephiroth", "Lenna", "CidHighwind", "Rydia", "Kefka", "Zack", "Lilisette", "Yuri", "Jecht", "Noctis", "Alisaie", "Selphie", "Gilgamesh", "Relm", "CaitSith", "Beatrix", "Leon", "Fang", "Seven", "Deuce", "Agrias", "Locke", "Barret", "CecilPaladin", "Rosa", "Golbez", "Rinoa", "Lulu", "LannReynn", "Freya", "Vayne", "Fran", "Porom", "Paine", "Cinque", "Prompto", "Alphinaud", "Noel", "Aphmau", "Sherlotta", "Garland", "Ultimecia", "Machina", "Lyse", "Basch", "Kimahri", "TheEmperor", "Eight", "Ignis", "Aranea", "Gau", "Kamlanaut", "Ciaran", "Leo", "ExDeath", "Caius", "Jack", "Arciela", "Keiss", "CloudofDarkness", "Ealdnarche", "Trey", "Amidatelion", "Desch", "Gabranth", "Nine", "Ardyn", "Edward", "Strago", "Kurasame", "Gladio", "Reno", "Rude", "Xande", "Guy", "Ceodore", "Mog", "Kadaj", "Iroha", "Cor", "Queen"];
 for (let i = 0; i < 3; i++)
 {
+
+    document.write('<div class="grid3">');
   var j = Math.floor(Math.random() * (fightersArr.length));
-  var imageUrl = '<img src=https://dissidiacompendium.com/images/static/characters/' + fightersArr[j] + '/cc.png </img>' + '<br><br>'
+  var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + fightersArr[j] + '/cc.png </img></div>'
   document.write(imageUrl);
   fightersArr.splice(j, 1);
+      document.write('</div>');
 }
 </script>
 
@@ -20,3 +29,4 @@ for (let i = 0; i < 3; i++)
 
 <h3>Image credit to <a href='https://dissidiacompendium.com'>Dissidia Compendium</a></h3>
 <h3>Made (very poorly) for the DFFOO community with love by Element40</h3>
+</html>

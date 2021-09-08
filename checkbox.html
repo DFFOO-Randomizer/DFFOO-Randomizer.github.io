@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
 <script>
 function uncheckAll() {
   document.querySelectorAll('input[type="checkbox"]')
@@ -179,6 +185,7 @@ for (var i = 0; i < checkboxes.length; i++) {
 
 for (let i = 0; i < 3; i++)
 {
+  document.write('<!DOCTYPE html><head><link rel="stylesheet" href="styles.css"></head>');
   document.write('<div class="grid3">');
   var j = Math.floor(Math.random() * (array.length));
   var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + array[j] + '/cc.png </img></div>'
@@ -191,3 +198,4 @@ document.write('</div>');
 </script>
 
 <button onclick="myFunction()">Get Random Team From Selection</button>
+</html>
