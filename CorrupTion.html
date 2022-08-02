@@ -22,10 +22,10 @@ document.write('</div>')
   document.write('<div class="grid">')
 for (let i = 0; i < 6; i++)
 {
-  var j = Math.floor(Math.random() * (callsArr.length));
+  var j = Math.floor(Math.random() * (fightersArr.length));
   var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + fightersArr[j] + '/cc.png </img>' + '</div>'
   document.write(imageUrl);
-  callsArr.splice(j, 1);
+  fightersArr.splice(j, 1);
 }
 document.write('</div>')
     document.write('<h3>Choose from these 2 Summons:</h3>');
