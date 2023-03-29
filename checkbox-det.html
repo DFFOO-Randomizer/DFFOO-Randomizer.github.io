@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<script>
+
+class Fighter{
+	constructor(name, crystal, fr){
+	this.name=name;
+	this.crystal=crystal;
+	this.fr=fr;
+	}
+}
+
+// Class that holds a collection of Fighters and properties and functions for the group
+class Fighters {
+  constructor(){
+    this.fighters = []
+  }
+  // create a new fighter and save it in the collection
+  newFighter(name, crystal, fr){
+    let f = new Fighter(name, crystal, fr)
+    this.fighters.push(f)
+    return f
+  }
+  get allFighters(){
+    return this.fighters
+  }
+  
+  get numberOfFighters(){
+      return this.fighters.length
+  }
+}
+
+function getTranscendanceTeam(tier, leftC, rightC, left1, left2, right1, right2){
+	var finalTier = []
+	finalTier.push(leftC)
+	finalTier.push(rightC)
+	finalTier.push(left1)
+	finalTier.push(right1)
+	finalTier.push(left2)
+	finalTier.push(right2)
+	console.log(finalTier)
+	document.write('<h3>Team for DE:T '+(tier)+' Left </h3>');
+	document.write('<div class = grid3>')
+	var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + leftC.name + '/cc.png </img></div>';
+	document.write(imageUrl);
+	var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + left1.name + '/cc.png </img></div>';
+	document.write(imageUrl);
+	var imageUrl = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + left2.name + '/cc.png </img></div>';
+	document.write(imageUrl);
+	document.write('</div>')
+	document.write('<h3>Team for DE:T '+(tier)+' Right </h3>');
+	document.write('<div class = grid3>')
+	var imageUrl2 = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + rightC.name + '/cc.png </img></div>';
+	document.write(imageUrl2);
+	var imageUrl2 = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + right1.name + '/cc.png </img></div>';
+	document.write(imageUrl2);
+	var imageUrl2 = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + right2.name + '/cc.png </img></div>';
+	document.write(imageUrl2);
+	document.write('</div>')
+    document.write('<h3>Team for DE:T '+(tier)+' Center </h3>');
+    document.write('<div class="grid3">');
+    for (let i = 0; i < 3; i++)
+    {
+      var j = Math.floor(Math.random() * (finalTier.length));
+      var imageUrl3 = '<div class="grid-item"><img src=https://dissidiacompendium.com/images/static/characters/' + finalTier[j].name + '/cc.png </img></div>';
+      document.write(imageUrl3);
+      finalTier.splice(j, 1);
+    }
+	document.write('</div>')
+	document.write('<br>')
+	
+}
+
+
+function myFunction() {
+document.write('<!DOCTYPE html><head><link rel="stylesheet" href="styles.css"></head>');
+let fighters = new Fighters();
+fighters.newFighter("Ace", "Green", "No");
+fighters.newFighter("Aerith", "Red", "Yes");
+fighters.newFighter("Agrias", "Green", "No");
+fighters.newFighter("Alisaie", "Red", "No");
+fighters.newFighter("Alphinaud", "Blue", "No");
+fighters.newFighter("Amidatelion", "Red", "No");
+fighters.newFighter("Aphmau", "Green", "No");
+fighters.newFighter("Aranea", "Blue", "Yes");
+fighters.newFighter("Arciela", "White", "No");
+fighters.newFighter("Ardyn", "Yellow", "Yes");
+fighters.newFighter("Ashe", "Blue", "Yes");
+fighters.newFighter("Auron", "Black", "No");
+fighters.newFighter("Balthier", "Yellow", "Yes");
+fighters.newFighter("Barret", "Red", "No");
+fighters.newFighter("Bartz", "Yellow", "No");
+fighters.newFighter("Basch", "Yellow", "No");
+fighters.newFighter("Beatrix", "Red", "Yes");
+fighters.newFighter("Braska", "White", "Yes");
+fighters.newFighter("CaitSith", "Blue", "No");
+fighters.newFighter("Caius", "Black", "No");
+fighters.newFighter("Cater", "Yellow", "No");
+fighters.newFighter("Cecil", "Black", "Yes");
+fighters.newFighter("CecilPaladin", "White", "No");
+fighters.newFighter("Celes", "Green", "Yes");
+fighters.newFighter("Ceodore", "Black", "No");
+fighters.newFighter("Ciaran", "Black", "No");
+fighters.newFighter("CidHighwind", "Blue", "No");
+fighters.newFighter("CidRaines", "Green", "Yes");
+fighters.newFighter("Cinque", "Green", "No");
+fighters.newFighter("Cissnei", "Green", "No");
+fighters.newFighter("Cloud", "Blue", "No");
+fighters.newFighter("CloudofDarkness", "Green", "Yes");
+fighters.newFighter("Cor", "Blue", "Yes");
+fighters.newFighter("Cyan", "Blue", "No");
+fighters.newFighter("Desch", "Yellow", "Yes");
+fighters.newFighter("Deuce", "White", "No");
+fighters.newFighter("Dorgann", "Green", "Yes");
+fighters.newFighter("Ealdnarche", "Black", "No");
+fighters.newFighter("Edgar", "Red", "No");
+fighters.newFighter("Edge", "Blue", "No");
+fighters.newFighter("Edward", "Blue", "No");
+fighters.newFighter("Eight", "Blue", "No");
+fighters.newFighter("Eiko", "White", "No");
+fighters.newFighter("EnnaKros", "White", "Yes");
+fighters.newFighter("ExDeath", "Blue", "No");
+fighters.newFighter("Fang", "Yellow", "No");
+fighters.newFighter("Faris", "Blue", "Yes");
+fighters.newFighter("Firion", "Red", "No");
+fighters.newFighter("Fran", "Yellow", "No");
+fighters.newFighter("Freya", "Red", "No");
+fighters.newFighter("Fujin", "Green", "Yes");
+fighters.newFighter("Fusoya", "White", "Yes");
+fighters.newFighter("Gabranth", "Green", "Yes");
+fighters.newFighter("Galuf", "Green", "No");
+fighters.newFighter("Garland", "Black", "No");
+fighters.newFighter("Garnet", "Green", "Yes");
+fighters.newFighter("Gau", "White", "No");
+fighters.newFighter("Gilgamesh", "Green", "No");
+fighters.newFighter("Gladio", "Black", "No");
+fighters.newFighter("Golbez", "Black", "No");
+fighters.newFighter("Guy", "White", "No");
+fighters.newFighter("Hope", "White", "Yes");
+fighters.newFighter("Ignis", "Red", "No");
+fighters.newFighter("Iroha", "Black", "Yes");
+fighters.newFighter("Irvine", "Yellow", "No");
+fighters.newFighter("Jack", "Red", "No");
+fighters.newFighter("JackGarland", "Blue", "Yes");
+fighters.newFighter("Jecht", "Red", "No");
+fighters.newFighter("Jegran", "Black", "No");
+fighters.newFighter("Jessie", "Yellow", "Yes");
+fighters.newFighter("Kadaj", "Red", "No");
+fighters.newFighter("Kain", "Black", "Yes");
+fighters.newFighter("Kamlanaut", "Green", "Yes");
+fighters.newFighter("Kefka", "Black", "No");
+fighters.newFighter("Keiss", "Yellow", "No");
+fighters.newFighter("Kimahri", "Black", "No");
+fighters.newFighter("King", "Black", "No");
+fighters.newFighter("Krile", "Blue", "Yes");
+fighters.newFighter("Kuja", "Red", "Yes");
+fighters.newFighter("Kurasame", "Red", "No");
+fighters.newFighter("Laguna", "Blue", "No");
+fighters.newFighter("LannReynn", "White", "No");
+fighters.newFighter("Layle", "Yellow", "No");
+fighters.newFighter("Leila", "Yellow", "No");
+fighters.newFighter("Lenna", "White", "No");
+fighters.newFighter("Leo", "White", "No");
+fighters.newFighter("Leon", "Black", "No");
+fighters.newFighter("Lightning", "Yellow", "No");
+fighters.newFighter("Lilisette", "Yellow", "Yes");
+fighters.newFighter("Lion", "White", "No");
+fighters.newFighter("Lluyd", "Red", "No");
+fighters.newFighter("Locke", "Blue", "No");
+fighters.newFighter("Lulu", "Yellow", "No");
+fighters.newFighter("Lunafreya", "Yellow", "Yes");
+fighters.newFighter("Lyse", "White", "No");
+fighters.newFighter("Machina", "Black", "Yes");
+fighters.newFighter("Maria", "Blue", "No");
+fighters.newFighter("Minwu", "Red", "Yes");
+fighters.newFighter("Mog", "Blue", "No");
+fighters.newFighter("Neon", "Blue", "Yes");
+fighters.newFighter("Nine", "White", "No");
+fighters.newFighter("Noctis", "Black", "No");
+fighters.newFighter("Noel", "Yellow", "No");
+fighters.newFighter("OnionKnight", "Red", "Yes");
+fighters.newFighter("Paine", "Blue", "No");
+fighters.newFighter("Palom", "Black", "No");
+fighters.newFighter("Papalymo", "Red", "No");
+fighters.newFighter("Penelo", "White", "Yes");
+fighters.newFighter("Porom", "White", "No");
+fighters.newFighter("Prishe", "Green", "No");
+fighters.newFighter("Prompto", "Red", "No");
+fighters.newFighter("Queen", "White", "No");
+fighters.newFighter("Quistis", "Yellow", "No");
+fighters.newFighter("Raijin", "Yellow", "No");
+fighters.newFighter("Ramza", "Yellow", "No");
+fighters.newFighter("Relm", "White", "No");
+fighters.newFighter("Rem", "Green", "No");
+fighters.newFighter("Reno", "Red", "Yes");
+fighters.newFighter("Rinoa", "Green", "No");
+fighters.newFighter("Rosa", "Blue", "No");
+fighters.newFighter("Rude", "Yellow", "No");
+fighters.newFighter("Rydia", "Green", "Yes");
+fighters.newFighter("Sabin", "Black", "Yes");
+fighters.newFighter("Sazh", "Red", "No");
+fighters.newFighter("Seifer", "Red", "No");
+fighters.newFighter("Selphie", "Yellow", "No");
+fighters.newFighter("Sephiroth", "Green", "No");
+fighters.newFighter("Serah", "White", "No");
+fighters.newFighter("Setzer", "Black", "No");
+fighters.newFighter("Seven", "Red", "Yes");
+fighters.newFighter("Seymour", "White", "Yes");
+fighters.newFighter("Shadow", "Black", "No");
+fighters.newFighter("Shantotto", "Black", "No");
+fighters.newFighter("Shelke", "Yellow", "No");
+fighters.newFighter("Sherlotta", "Yellow", "Yes");
+fighters.newFighter("Sice", "Black", "Yes");
+fighters.newFighter("Snow", "Green", "No");
+fighters.newFighter("Squall", "Black", "No");
+fighters.newFighter("Steiner", "Green", "No");
+fighters.newFighter("Strago", "Green", "Yes");
+fighters.newFighter("Terra", "Green", "Yes");
+fighters.newFighter("Thancred", "White", "No");
+fighters.newFighter("TheEmperor", "White", "No");
+fighters.newFighter("Tidus", "Blue", "Yes");
+fighters.newFighter("Tifa", "Yellow", "Yes");
+fighters.newFighter("Trey", "Blue", "No");
+fighters.newFighter("Ultimecia", "Green", "No");
+fighters.newFighter("Ursula", "Blue", "Yes");
+fighters.newFighter("Vaan", "Red", "Yes");
+fighters.newFighter("Vanille", "Red", "No");
+fighters.newFighter("Vayne", "Blue", "Yes");
+fighters.newFighter("Vincent", "White", "No");
+fighters.newFighter("Vivi", "Black", "Yes");
+fighters.newFighter("Wakka", "Blue", "No");
+fighters.newFighter("WarriorofLight", "White", "Yes");
+fighters.newFighter("Xande", "Green", "No");
+fighters.newFighter("Yang", "Yellow", "No");
+fighters.newFighter("Yda", "Green", "No");
+fighters.newFighter("Yshtola", "Yellow", "No");
+fighters.newFighter("Yuffie", "Red", "No");
+fighters.newFighter("Yuna", "White", "Yes");
+fighters.newFighter("Yuri", "White", "Yes");
+fighters.newFighter("Zack", "Black", "No");
+fighters.newFighter("Zell", "Red", "No");
+fighters.newFighter("Zidane", "Blue", "No");
+
+var redCrystals = fighters.allFighters.filter(item => item.crystal == "Red").sort(() => Math.random() - Math.random()).slice(0, 2);
+var blueCrystals = fighters.allFighters.filter(item => item.crystal == "Blue").sort(() => Math.random() - Math.random()).slice(0, 6);
+var greenCrystals = fighters.allFighters.filter(item => item.crystal == "Green").sort(() => Math.random() - Math.random()).slice(0, 5);
+var yellowCrystals = fighters.allFighters.filter(item => item.crystal == "Yellow").sort(() => Math.random() - Math.random()).slice(0, 4);
+var whiteCrystals = fighters.allFighters.filter(item => item.crystal == "White").sort(() => Math.random() - Math.random()).slice(0, 5);
+var blackCrystals = fighters.allFighters.filter(item => item.crystal == "Black").sort(() => Math.random() - Math.random()).slice(0, 4);
+var randomFighters = fighters.allFighters;
+
+
+console.log(redCrystals)
+console.log(blueCrystals)
+console.log(greenCrystals)
+console.log(yellowCrystals)
+console.log(whiteCrystals)
+console.log(blackCrystals)
+
+var finalOthers = randomFighters.filter(item => !redCrystals.includes(item)).filter(item => !blueCrystals.includes(item)).filter(item => !greenCrystals.includes(item)).filter(item => !blackCrystals.includes(item)).filter(item => !whiteCrystals.includes(item)).filter(item => !yellowCrystals.includes(item)).sort(() => Math.random() - Math.random()).slice(0, 52);
+
+console.log(finalOthers)
+
+getTranscendanceTeam(1, whiteCrystals[0], blueCrystals[0], finalOthers[0], finalOthers[1], finalOthers[2], finalOthers[3])
+getTranscendanceTeam(2, blackCrystals[0], blueCrystals[1], finalOthers[4], finalOthers[5], finalOthers[6], finalOthers[7])
+getTranscendanceTeam(3, yellowCrystals[0], whiteCrystals[1], finalOthers[8], finalOthers[9], finalOthers[10], finalOthers[11])
+getTranscendanceTeam(4, whiteCrystals[2], redCrystals[0], finalOthers[12], finalOthers[13], finalOthers[14], finalOthers[15])
+getTranscendanceTeam(5, greenCrystals[0], yellowCrystals[1], finalOthers[16], finalOthers[17], finalOthers[18], finalOthers[19])
+getTranscendanceTeam(6, blackCrystals[1], yellowCrystals[2], finalOthers[20], finalOthers[21], finalOthers[22], finalOthers[23])
+getTranscendanceTeam(7, blueCrystals[2], redCrystals[1], finalOthers[24], finalOthers[25], finalOthers[26], finalOthers[27])
+getTranscendanceTeam(8, blueCrystals[3], greenCrystals[1], finalOthers[28], finalOthers[29], finalOthers[30], finalOthers[31])
+getTranscendanceTeam(9, whiteCrystals[3], greenCrystals[2], finalOthers[32], finalOthers[33], finalOthers[34], finalOthers[35])
+getTranscendanceTeam(10, yellowCrystals[3], blueCrystals[4], finalOthers[36], finalOthers[37], finalOthers[38], finalOthers[39])
+getTranscendanceTeam(11, greenCrystals[3], blackCrystals[2], finalOthers[40], finalOthers[41], finalOthers[42], finalOthers[43])
+getTranscendanceTeam(12, whiteCrystals[4], greenCrystals[4], finalOthers[44], finalOthers[45], finalOthers[46], finalOthers[47])
+getTranscendanceTeam(13, blackCrystals[3], blueCrystals[5], finalOthers[48], finalOthers[49], finalOthers[50], finalOthers[51])
+
+
+
+}
+
+window.onload = myFunction;
+
+</script>
+
+</html>
